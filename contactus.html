@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Contact Form</title>
   
   <style>
@@ -106,10 +107,64 @@
     button:hover {
       background: #8a0606;
     }
-    i{
 
-color: #fff;
+    footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+      margin-top: 40px;
+    }
 
+    .newsletter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 15px;
+      width: 300px;
+      border: 2px solid #ec0b0b;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+      color: #e8e1e1;
+      background: transparent;
+      font-family: "Pirata One", system-ui;
+    }
+
+    .newsletter button {
+      padding: 15px 30px;
+      margin-left: 10px;
+      border-radius: 5px;
+      border: 2px solid #ec0b0b;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .newsletter button:hover {
+      background-color: #590404;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social i {
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+
+    .social i:hover {
+      color: #ec0b0b;
     }
   </style>
 </head>
@@ -121,11 +176,11 @@ color: #fff;
     <h1>Contact</h1>
     <form>
       <div class="field half">
-        <input type="text" placeholder="Name" id="name" class="item">
-        <input type="email" placeholder="Email" id="email" class="item">
+        <input type="text" placeholder="Name" id="name" class="item" required>
+        <input type="email" placeholder="Email" id="email" class="item" required>
       </div>
       <div class="field">
-        <input type="text" placeholder="Phone Number" id="number" class="item">
+        <input type="text" placeholder="Phone Number" id="number" class="item" required>
       </div>
       <div class="field">
         <textarea id="message" cols="35" rows="8" placeholder="Comment" class="item"></textarea>
@@ -133,14 +188,20 @@ color: #fff;
       <button type="submit">Send</button>
     </form>
   </section>
-  <section>
-<footer>
-    <p><i class="fa-brands fa-facebook"></i></p>
 
-
-</footer>
-
-  </section>
+  <footer>
+    <div class="newsletter">
+      <form action="#">
+        <input type="email" id="newsletter-email" placeholder="Enter your email for updates" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="social">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-tiktok"></i>
+    </div>
+  </footer>
 
   <script>
     let dat = new Date();
