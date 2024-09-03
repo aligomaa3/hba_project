@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>Contact Form</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 160vh;
+      background: url('https://pics.craiyon.com/2023-09-14/cadec770039741d3bb1043ae6310997f.webp') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Pirata One", system-ui;
+    }
+
+    .logo {
+      width: 190px;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-family: "Pirata One", system-ui;
+    }
+
+    .contact {
+      color: #fdf9f9;
+      width: 700px;
+    }
+
+    .contact h1 {
+      font-size: 40px;
+      font-family: "Pirata One", system-ui;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 60px;
+      text-align: left;
+    }
+
+    .contact form {
+      width: 110%;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .field {
+      margin-bottom: 15px;
+    }
+
+    .item {
+      width: 100%;
+      padding: 18px;
+      background: transparent;
+      border: 2px solid #ec0b0b;
+      outline: none;
+      border-radius: 5px;
+      font-size: 18px;
+      color: #e8e1e1;
+      margin-top: 10px;
+      font-family: "Pirata One", system-ui;
+    }
+
+    .item::placeholder {
+      color: rgba(240, 255, 255, 0.495);
+    }
+
+    .field.half input:first-child {
+      display: inline-block;
+      width: 49%;
+    }
+
+    .field.half input:nth-child(2) {
+      margin-left: 8px;
+      width: 49%;
+    }
+
+    button {
+      padding: 12px 32px;
+      background-color: #a7070700;
+      border: 3px solid #ec0b0b;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #590404;
+      cursor: pointer;
+      color: #fff;
+      font-size: 18px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #8a0606;
+    }
+    i{
+
+color: #fff;
+
+    }
+  </style>
+</head>
+
+<body>
+  <img src="https://sphinx.fit/cdn/shop/files/Blackout_GIF4.gif?v=1722206876&width=500" class="logo" alt="Logo">
+  <p class="date"></p> 
+  <section class="contact">
+    <h1>Contact</h1>
+    <form>
+      <div class="field half">
+        <input type="text" placeholder="Name" id="name" class="item">
+        <input type="email" placeholder="Email" id="email" class="item">
+      </div>
+      <div class="field">
+        <input type="text" placeholder="Phone Number" id="number" class="item">
+      </div>
+      <div class="field">
+        <textarea id="message" cols="35" rows="8" placeholder="Comment" class="item"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+  <section>
+<footer>
+    <p><i class="fa-brands fa-facebook"></i></p>
+
+
+</footer>
+
+  </section>
+
+  <script>
+    let dat = new Date();
+    let date = document.querySelector(".date");
+    date.innerHTML = dat.toLocaleString();
+  </script>
+</body>
+
+</html>
